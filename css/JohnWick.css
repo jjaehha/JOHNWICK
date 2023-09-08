@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap");
+
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: url(../files/jw1.jpeg) no-repeat fixed center / cover;
+}
+#background {
+    width: 60%;
+    height: 100vh;
+    position: fixed;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6) 60%, transparent);
+    /* to 방향, 시작 색상, 중지점의 색상과 위치, 끝 색상 */
+}
+#container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#container > * {
+    z-index: 100;
+}
+
+/* header */
+header > .logo_wrap {
+    float: left;
+    margin-top: 15px;
+    margin-left: 63px;
+}
+header > .logo_wrap > img {
+    height: 35px;
+}
+header > .menu {
+    float: left;
+}
+header > .menu > ul {
+    list-style: none;
+    display: flex;
+    column-gap: 14px;
+    margin-top: 22.5px;
+    margin-left: 70px;
+}
+header > .menu > ul > li > a {
+    text-decoration: none;
+    font-size: 12.5px;
+    letter-spacing: 2.4px;
+    transition: 0.2s linear;
+    color: white;
+}
+header > .menu > ul > li:first-child > a {
+    color: red;
+}
+header > .menu > ul > li > a:hover {
+    color: red;
+}
+header > .category {
+    float: right;
+}
+header > .category > a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3px;
+    margin-top: 18px;
+    margin-right: 26px;
+}
+header > .category > a > div {
+    width: 20px;
+    height: 1.7px;
+    border-radius: 3px;
+    background-color: white;
+}
+
+/* section */
+section {
+    display: flex;
+    justify-content: space-between;
+}
+section > .content {
+    color: white;
+    height: 400px;
+    margin-left: 128px;
+}
+section > .content > .title_wrap > img {
+    width: 410px;
+}
+section > .content > p:first-of-type {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-top: 22px;
+}
+section > .content > p:last-of-type {
+    font-size: 10px;
+    font-weight: 100;
+    line-height: 11.5px;
+    margin-top: 20px;
+}
+section > .content > .info {
+    list-style: none;
+    display: flex;
+    column-gap: 22.5px;
+    margin-top: 41px;
+    font-size: 11px;
+    font-weight: 100;
+}
+section > .content > .info > li > strong {
+    letter-spacing: 1px;
+    margin-right: 8px;
+    font-weight: 500;
+}
+section > .content > .btn {
+    display: flex;
+    column-gap: 18px;
+    margin-top: 70px;
+}
+section > .content > .btn > a {
+    text-decoration: none;
+    color: white;
+    font-size: 11px;
+    font-weight: 300;
+    width: 110px;
+    border: 1px solid #999;
+    border-radius: 500px;
+    padding: 10px;
+    text-align: center;
+}
+section > .pop_up > a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    column-gap: 21px;
+    transform: rotate(180deg);
+    margin-top: 196px;
+    margin-right: 13px;
+}
+section > .pop_up > a > p:first-of-type {
+    font-family: "consolas";
+    font-size: 24px;
+    animation: arrow_move 0.5s infinite linear alternate;
+}
+section > .pop_up > a > p:last-of-type {
+    font-size: 13px;
+    font-weight: 500;
+    writing-mode: vertical-rl;
+}
+@keyframes arrow_move {
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        transform: translateX(7px);
+    }
+}
+
+/* footer */
+footer > .sns {
+    display: flex;
+    column-gap: 40px;
+    margin-bottom: 24px;
+    margin-left: 84px;
+}
+footer > .sns > a {
+    text-decoration: none;
+}
+footer > .sns > a > img {
+    height: 27px;
+}
